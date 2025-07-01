@@ -1,7 +1,75 @@
-
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/variables" as var;
 
 .page-about-us {
-    
+    .approaches-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+
+        .mission {
+            &__title {
+                color: var.$color-neutro-900;
+                font-size: var.$font-size-lg;
+                font-weight: var.$font-weight-regular;
+            }
+
+            &__description {
+                color: var.$color-neutro-700;
+                font-size: var.$font-size-md;
+                font-weight: var.$font-weight-bold;
+            }
+
+            &__image {
+                width: 100px;
+                height: fit-content;
+                float: left;
+            }
+
+
+        }
+
+        .vision {
+            &__title {
+                color: var.$color-neutro-900;
+                font-size: var.$font-size-lg;
+                font-weight: var.$font-weight-regular;
+            }
+
+            &__description {
+                color: var.$color-neutro-700;
+                font-size: var.$font-size-md;
+                font-weight: var.$font-weight-bold;
+            }
+
+            &__image {
+                width: 25%;
+                height: fit-content;
+                float: right;
+            }
+
+        }
+
+        .values {
+            &__title {
+                color: var.$color-neutro-900;
+                font-size: var.$font-size-lg;
+                font-weight: var.$font-weight-regular;
+            }
+
+            &__description {
+                color: var.$color-neutro-700;
+                font-size: var.$font-size-md;
+                font-weight: var.$font-weight-bold;
+            }
+
+            &__image {
+                width: 25%;
+                height: fit-content;
+                float: left;
+            }
+
+        }
+    }
 }
