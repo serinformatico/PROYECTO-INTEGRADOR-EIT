@@ -2,26 +2,23 @@
 @use "../abstracts/variables" as var;
 
 nav {
-    grid-area: navbar;
+  grid-area: navbar;
 
-    padding: var.$spacing-sm;
 
-  .navbar{
+  .navbar {
 
     display: flex;
+    justify-content: center;
     gap: 1rem;
 
+    &__item {
+      color: var.$color-neutro-900;
+      font-size: var.$font-size-md;
 
-    &__item{
-        &:hover,
-        &--active{
-            color: var.$color-neutro-900;
-            font-weight:var.$font-weight-bold;
-        }
-
-
+      &:hover,
+      &--active {
+        font-weight: var.$font-weight-bold;
+      }
     }
-
   }
 }
-
