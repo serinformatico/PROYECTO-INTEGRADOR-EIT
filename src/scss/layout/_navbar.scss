@@ -5,4 +5,23 @@ nav {
     grid-area: navbar;
 
     padding: var.$spacing-sm;
+
+  .navbar{
+
+    display: flex;
+    gap: 1rem;
+
+
+    &__item{
+        &:hover,
+        &--active{
+            color: var.$color-neutro-900;
+            font-weight:var.$font-weight-bold;
+        }
+
+
+    }
+
+  }
 }
+
