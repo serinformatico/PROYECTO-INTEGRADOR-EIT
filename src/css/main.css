@@ -21,6 +21,51 @@ img {
   width: 100%;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid #212529;
+  padding: 1rem;
+  border-radius: 1rem 0 1rem 0;
+}
+.card__image {
+  border-top-left-radius: 0.5rem;
+}
+.card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #212529;
+}
+.card__code {
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-align: right;
+}
+.card__description {
+  font-size: 1rem;
+  color: #343a40;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 4.2em;
+  word-break: break-word;
+  text-align: justify;
+}
+.card__price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #212529;
+  text-align: center;
+}
+.card__actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .slider {
   position: relative;
   height: 25vh;
@@ -75,6 +120,40 @@ img {
   100% {
     transform: translateX(0);
   }
+}
+
+.button {
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.25rem;
+  border: 1px solid #343a40;
+  border-radius: 0.25rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.12);
+}
+.button--add {
+  background-color: #e6f4ea;
+  color: #134119;
+  border-color: #134119;
+}
+.button--add:hover, .button--add:active {
+  background-color: #99dba3;
+  outline: 1px solid #134119;
+}
+.button--remove {
+  background-color: #fbeaea;
+  color: #430909;
+  border-color: #430909;
+}
+.button--remove:hover, .button--remove:active {
+  background-color: #f09898;
+  outline: 1px solid #430909;
+}
+
+.title {
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3b241a;
 }
 
 body {
@@ -154,4 +233,10 @@ nav .navbar__item:hover, nav .navbar__item--active {
 .page-about-us .approaches-container .vision__image {
   float: right;
   margin: 0 0 0.25rem 0.5rem;
+}
+
+.page-products .gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
