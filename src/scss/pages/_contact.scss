@@ -3,5 +3,9 @@
 @use "../abstracts/variables" as var;
 
 .page-contact {
-    
+    &__content{
+        display:flex ;
+        flex-direction: column;
+        gap: var.$spacing-md ;
+    }
 }
