@@ -157,6 +157,16 @@ img {
   background-color: #3b241a;
   outline: 1px solid #212529;
 }
+.button--search {
+  background-color: #7c5032;
+  color: #f8f9fa;
+  border-color: #3b241a;
+  padding: 0.25rem;
+}
+.button--search:hover, .button--search:active {
+  background-color: #3b241a;
+  outline: 1px solid #212529;
+}
 
 .title {
   padding: 1rem 0;
@@ -292,6 +302,18 @@ nav .navbar__item:hover, nav .navbar__item--active {
   color: #3b241a;
 }
 
+.page-products__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-products__head .searcher__word {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #212529;
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 0.25rem;
+}
 .page-products .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
