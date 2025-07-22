@@ -38,9 +38,6 @@ img {
   color: #212529;
 }
 .card__title--highlighted {
-  position: absolute;
-  top: 35%;
-  left: calc(50% - 120px);
   font-size: 1.5rem;
   color: #f8f9fa;
 }
@@ -63,9 +60,6 @@ img {
   text-align: justify;
 }
 .card__description--highlighted {
-  position: absolute;
-  top: 50%;
-  left: calc(50% - 90px);
   color: #f8f9fa;
 }
 .card__price {
@@ -83,6 +77,16 @@ img {
   padding: 0;
   border-radius: 0.5rem;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card--highlighted--float {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .slider {
