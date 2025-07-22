@@ -1,4 +1,11 @@
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/variables" as var;
 
-.page-home {}
+.page-home {
+    .highlighted-products {
+        display: flex;
+        gap: var.$spacing-sm;
+
+        padding: var.$spacing-sm 0;
+    }
+}

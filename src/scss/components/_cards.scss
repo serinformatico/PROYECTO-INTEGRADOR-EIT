@@ -18,6 +18,15 @@
         font-size: var.$font-size-md;
         font-weight: var.$font-weight-bold;
         color: var.$color-neutro-900;
+
+        &--highlighted {
+            position: absolute;
+            top: 35%;
+            left: calc(50% - 120px);
+
+            font-size: var.$font-size-xl;
+            color: var.$color-neutro-100;
+        }
     }
 
     &__code{
@@ -31,6 +40,14 @@
         color: var.$color-neutro-700;
         @include mix.text-ellipsis();
         text-align: justify;
+
+        &--highlighted {
+            position: absolute;
+            top: 50%;
+            left: calc(50% - 90px);
+
+            color: var.$color-neutro-100;
+        }
     }
 
     &__price{
@@ -43,6 +60,15 @@
     &__actions{
         display: flex;
         justify-content: space-evenly;
+    }
+
+    &--highlighted {
+        border: none;
+        padding: 0;
+        border-radius: 0.5rem;
+        
+        position: relative;
+        
     }
 
 }

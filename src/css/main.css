@@ -37,6 +37,13 @@ img {
   font-weight: 700;
   color: #212529;
 }
+.card__title--highlighted {
+  position: absolute;
+  top: 35%;
+  left: calc(50% - 120px);
+  font-size: 1.5rem;
+  color: #f8f9fa;
+}
 .card__code {
   font-size: 0.75rem;
   color: #6c757d;
@@ -55,6 +62,12 @@ img {
   word-break: break-word;
   text-align: justify;
 }
+.card__description--highlighted {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 90px);
+  color: #f8f9fa;
+}
 .card__price {
   font-size: 1rem;
   font-weight: 700;
@@ -64,6 +77,12 @@ img {
 .card__actions {
   display: flex;
   justify-content: space-evenly;
+}
+.card--highlighted {
+  border: none;
+  padding: 0;
+  border-radius: 0.5rem;
+  position: relative;
 }
 
 .slider {
@@ -234,6 +253,12 @@ nav .navbar__item {
 }
 nav .navbar__item:hover, nav .navbar__item--active {
   font-weight: 700;
+}
+
+.page-home .highlighted-products {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .page-about-us .approaches-container {
