@@ -32,6 +32,9 @@ img {
 .card__image {
   border-top-left-radius: 0.5rem;
 }
+.card__image--highlighted {
+  border-radius: 0.5rem;
+}
 .card__title {
   font-size: 1rem;
   font-weight: 700;
@@ -60,6 +63,7 @@ img {
   text-align: justify;
 }
 .card__description--highlighted {
+  font-size: 1.25rem;
   color: #f8f9fa;
 }
 .card__price {
@@ -75,13 +79,12 @@ img {
 .card--highlighted {
   border: none;
   padding: 0;
-  border-radius: 0.5rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.card--highlighted--float {
+.card__floating-content {
   position: absolute;
   display: flex;
   flex-direction: column;

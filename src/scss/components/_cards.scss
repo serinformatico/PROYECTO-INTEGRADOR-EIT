@@ -10,54 +10,51 @@
     padding: var.$spacing-md;
     border-radius: var.$spacing-md 0 var.$spacing-md 0;
 
-    &__image{
+    &__image {
         border-top-left-radius: var.$spacing-sm;
+
+        &--highlighted {
+            border-radius: var.$spacing-sm;
+        }
     }
 
-    &__title{
+    &__title {
         font-size: var.$font-size-md;
         font-weight: var.$font-weight-bold;
         color: var.$color-neutro-900;
 
         &--highlighted {
-            // position: absolute;
-            // top: 35%;
-            // left: calc(50% - 120px);
-
             font-size: var.$font-size-xl;
             color: var.$color-neutro-100;
         }
     }
 
-    &__code{
+    &__code {
         font-size: var.$font-size-xs;
         color: var.$color-neutro-500;
         text-align: right;
     }
 
-    &__description{
+    &__description {
         font-size: var.$font-size-md;
         color: var.$color-neutro-700;
         @include mix.text-ellipsis();
         text-align: justify;
 
         &--highlighted {
-            // position: absolute;
-            // top: 50%;
-            // left: calc(50% - 90px);
-
+            font-size: var.$font-size-lg;
             color: var.$color-neutro-100;
         }
     }
 
-    &__price{
+    &__price {
         font-size: var.$font-size-md;
         font-weight: var.$font-weight-bold;
         color: var.$color-neutro-900;
         text-align: center;
     }
 
-    &__actions{
+    &__actions {
         display: flex;
         justify-content: space-evenly;
     }
@@ -65,23 +62,18 @@
     &--highlighted {
         border: none;
         padding: 0;
-        border-radius: 0.5rem;
-        
-        position: relative;
 
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        &--float {
-            position: absolute;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
     }
 
+    &__floating-content {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
 }
