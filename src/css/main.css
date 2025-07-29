@@ -42,7 +42,12 @@ img {
 }
 .card__title--highlighted {
   font-size: 1.5rem;
-  color: #f8f9fa;
+  color:#f8f9fa;
+  position: absolute;
+  bottom: 190px;
+  left: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.30rem;
 }
 .card__code {
   font-size: 0.75rem;
@@ -63,8 +68,13 @@ img {
   text-align: justify;
 }
 .card__description--highlighted {
-  font-size: 1.25rem;
-  color: #f8f9fa;
+  font-size: 1.5rem;
+  color:#f8f9fa;
+  position: relative;
+  top:185px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.30rem;
+  font-size: 18px;
 }
 .card__price {
   font-size: 1rem;
@@ -88,13 +98,13 @@ img {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center;
   gap: 0.5rem;
 }
 
 .slider {
   position: relative;
-  height: 25vh;
+  height: 50vh;
   width: 100%;
   overflow: hidden;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
@@ -223,6 +233,8 @@ body {
   display: grid;
   grid-template-areas: "header" "navbar" "main" "footer";
   grid-template-rows: max-content max-content 1fr max-content;
+  background-image: url(../assets/images/background/background.jpg);
+  background-size: cover;
 }
 
 footer {
@@ -239,6 +251,13 @@ footer .copyright {
 header {
   grid-area: header;
   padding: 1.5rem;
+}
+
+header .img-logo {
+  width: 3%;
+  position: absolute;
+  top: 10px;
+  left: 200px;
 }
 
 main {
@@ -327,6 +346,7 @@ nav .navbar__item:hover, nav .navbar__item--active {
   padding: 1rem;
   border: 1px solid #7c5032;
   border-radius: 0.25rem;
+  background-color: #f8f9fa;
 }
 .page-contact .content .contact-data__item {
   font-size: 0.875rem;
