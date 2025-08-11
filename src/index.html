@@ -1,75 +1,103 @@
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="es-UY">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Web - Inicio</title>
+    <title>Sophie's Shop - Inicio</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
     <header>
-        <h1>Tienda Web</h1>
-        <nav>
-            <ul class="navbar">
-                <li><a class="navbar__item navbar__item--active" href="./index.html">Inicio</a></li>
-                <li><a class="navbar__item" href="./about-us.html">Nosotros</a></li>
-                <li><a class="navbar__item" href="./products.html">Productos</a></li>
-                <li><a class="navbar__item" href="./contact.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+        <h1 class="name">Sophie's Shop</h1>
 
+    </header>
+    <nav>
+        <ul class="navbar">
+            <li><a class="navbar__item" href="./index.html">Inicio</a></li>
+            <li><a class="navbar__item" href="./about-us.html">Nosotros</a></li>
+            <li><a class="navbar__item" href="./products.html">Productos</a></li>
+            <li><a class="navbar__item" href="./contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+    </header>
     <main class="page-home">
         <section>
             <h2 class="title">Inicio</h2>
-            <article class="slider">
-                <div class="slider__slides">
-                    <div class="slider__slide">
-                        <img src="./assets/images/slider/slide1.jpg" alt="Coche deportivo 1" />
+            <div class="textInicio">
+                <article class="slider">
+                    <div class="slider__slides">
+                        <div class="slider__slide">
+                            <img src="./assets/images/slider/slide A.jpg" alt="Model 1" />
+                        </div>
+                        <div class="slider__slide">
+                            <img src="./assets/images/slider/slide B.jpg" alt="Model 2" />
+                        </div>
+                        <div class="slider__slide">
+                            <img src="./assets/images/slider/Slide.jpg" alt="Model 3" />
+                        </div>
                     </div>
-                    <div class="slider__slide">
-                        <img src="./assets/images/slider/slide2.jpg" alt="Coche deportivo 2" />
-                    </div>
-                    <div class="slider__slide">
-                        <img src="./assets/images/slider/slide3.jpg" alt="Coche deportivo 3" />
-                    </div>
-                </div>
-            </article>
+                </article>
+                <div class="Pinicio">
 
+                    <img class="logo"
+                        src="../src/assets/images/Homepage/05bfe8_7fad6189dc0b418191aaa8f81e6666b9~mv2.avif" alt="logo">
+                    <h2>Tienda Vintage</h2>
+                    <br>
+                    <p> Encontramos piezas unicas para personas unicas.</p><br>
+                    <p>Creemos en el valor de lo auténtico.</p><br>
+                    <p> Cada prenda cuenta una historia, y queremos que seas parte de ella.</p>
+
+
+                </div>
+            </div>
             <article class="highlighted-products">
                 <div class="card card--highlighted">
                     <div class="card__floating-content">
-                        <h3 class="card__title card__title--highlighted">Producto Destacado 1</h3>
-                        <p class="card__description card__description--highlighted">Producto Destacado 1</p>
+                        <h3 class="card__title card__title--highlighted">Tops</h3>
+
                     </div>
-                    <img class="card__image card__image--highlighted" src="../src/assets/images/highlighted/image1.jpg"
-                        alt="Producto destacado 1">
+                    <a href="./products.html">
+                        <img class="card__image card__image--highlighted"
+                            src="../src/assets/images/highlighted/Top parts.jpg" alt="Producto destacado 1">
+                    </a>
                 </div>
                 <div class="card card--highlighted">
                     <div class="card__floating-content">
-                        <h3 class="card__title card__title--highlighted">Producto Destacado 2</h3>
-                        <p class="card__description card__description--highlighted">Descripción del producto 2</p>
+                        <h3 class="card__title card__title--highlighted">Shoes</h3>
+
                     </div>
-                    <img class="card__image card__image--highlighted" src="../src/assets/images/highlighted/image2.jpg"
-                        alt="Producto destacado 2">
+                    <a href="./products.html">
+                        <img class="card__image card__image--highlighted"
+                            src="../src/assets/images/highlighted/Shoes 1.jpg" alt="Producto destacado 2"></a>
                 </div>
                 <div class="card card--highlighted">
                     <div class="card__floating-content">
-                        <h3 class="card__title card__title--highlighted">Producto Destacado 3</h3>
-                        <p class="card__description card__description--highlighted">Descripción del producto 3</p>
+                        <h3 class="card__title card__title--highlighted">Bottoms</h3>
+
                     </div>
-                    <img class="card__image card__image--highlighted" src="../src/assets/images/highlighted/image3.jpg"
-                        alt="Producto destacado 3">
+                    <a href="./products.html">
+                        <img class="card__image card__image--highlighted"
+                            src="../src/assets/images/highlighted/bottom parts.jpg" alt="Producto destacado 3"></a>
+                </div>
+                <div class="card card--highlighted">
+                    <div class="card__floating-content">
+                        <h3 class="card__title card__title--highlighted">Acessories</h3>
+
+                    </div>
+                    <a href="./products.html">
+                        <img class="card__image card__image--highlighted"
+                            src="../src/assets/images/highlighted/accesories.jpg" alt="Producto destacado 4"></a>
                 </div>
             </article>
+
         </section>
 
     </main>
 
     <footer>
-        <p class="copyright">&copy;2025 Todos los derechos reservados - MiNombre</p>
+        <p class="copyright">&copy;2025 Todos los derechos reservados - Sofia Pascual</p>
     </footer>
 
     <script type="module" src="./js/main.js"></script>

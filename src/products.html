@@ -4,45 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Web - Productos</title>
+    <title>Sophie's Shop - Productos</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
     <header>
-        <h1>Tienda Web</h1>
-        <nav>
-            <ul class="navbar">
-                <li><a class="navbar__item" href="./index.html">Inicio</a></li>
-                <li><a class="navbar__item" href="./about-us.html">Nosotros</a></li>
-                <li><a class="navbar__item navbar__item--active" href="./products.html">Productos</a></li>
-                <li><a class="navbar__item" href="./contact.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <h1 class="name">Sophie's Shop</h1>
+        <div class="searcher">
+            <input class="searcher__word" type="text" />
+            <button class="button">Buscar</button>
+        </div>
+    </header>
+    <nav>
+        <ul class="navbar">
+            <li><a class="navbar__item " href="./index.html">Inicio</a></li>
+            <li><a class="navbar__item" href="./about-us.html">Nosotros</a></li>
+            <li><a class="navbar__item" href="./products.html">Productos</a></li>
+            <li><a class="navbar__item" href="./contact.html">Contacto</a></li>
+        </ul>
+
+
+    </nav>
     </header>
 
     <main class="page-products">
         <section>
-            <div class="page-products__head">
-                <h2 class="title">Productos</h2>
-                <div class="searcher">
-                    <input class="searcher__word" type="text" />
-                    <button class="button button--search">Buscar</button>
-                </div>
-            </div>
-
+            <h2 class="title">Shop</h2>
+            <h2 class="h2Prod">Tops</h2>
             <article class="gallery">
                 <div class="card">
-                    <img class="card__image" src="./assets/images/products/product01.jpg" alt="Imagen de producto">
-                    <h3 class="card__title">Titulo</h3>
-                    <span class="card__code">025694</span>
-                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                        eveniet omnis asperiores sint temporibus nobis possimus adipisci! Sit molestias sint similique
-                        accusantium vitae praesentium, exercitationem dignissimos nesciunt neque rem odit. Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Dignissimos, cumque cum impedit saepe magni
-                        voluptatibus corrupti maxime maiores beatae officiis fuga quo quasi nobis soluta repellat
-                        architecto exercitationem doloremque fugit.</p>
-                    <span class="card__price">$1000</span>
+                    <img class="card__image" src="./assets/images/products/Viviene West blazer.jpg"
+                        alt="Imagen de producto">
+                    <h3 class="card__title">Blazer vintage Vivienne Westwood</h3>
+                    <span class="card__code">022444</span>
+                    <p class="card__description">Talle: S
+                        <br>
+                        Color: Rayas blancas y negras
+
+                    </p>
+                    <span class="card__price">US$1.100,00</span>
                     <div class="card__actions">
                         <button class="button button--add">Agregar al carrito</button>
                         <span class="card__counter">0</span>
@@ -50,16 +51,16 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card__image" src="./assets/images/products/product02.jpg" alt="Imagen de producto">
-                    <h3 class="card__title">Titulo</h3>
-                    <span class="card__code">025694</span>
-                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                        eveniet omnis asperiores sint temporibus nobis possimus adipisci! Sit molestias sint similique
-                        accusantium vitae praesentium, exercitationem dignissimos nesciunt neque rem odit. Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Dignissimos, cumque cum impedit saepe magni
-                        voluptatibus corrupti maxime maiores beatae officiis fuga quo quasi nobis soluta repellat
-                        architecto exercitationem doloremque fugit.</p>
-                    <span class="card__price">$1000</span>
+                    <img class="card__image" src="./assets/images/products/padlock corset top.jpg"
+                        alt="Imagen de producto">
+                    <h3 class="card__title">Corset Vintage Lip Service</h3>
+                    <span class="card__code">025554</span>
+                    <p class="card__description">Talle:M <br>
+                        Color:Negro con detalles en cromado gris
+
+                    </p>
+
+                    <span class="card__price">US$100</span>
                     <div class="card__actions">
                         <button class="button button--add">Agregar al carrito</button>
                         <span class="card__counter">0</span>
@@ -67,16 +68,14 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card__image" src="./assets/images/products/product03.jpg" alt="Imagen de producto">
-                    <h3 class="card__title">Titulo</h3>
-                    <span class="card__code">025694</span>
-                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                        eveniet omnis asperiores sint temporibus nobis possimus adipisci! Sit molestias sint similique
-                        accusantium vitae praesentium, exercitationem dignissimos nesciunt neque rem odit. Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Dignissimos, cumque cum impedit saepe magni
-                        voluptatibus corrupti maxime maiores beatae officiis fuga quo quasi nobis soluta repellat
-                        architecto exercitationem doloremque fugit.</p>
-                    <span class="card__price">$1000</span>
+                    <img class="card__image" src="./assets/images/products/Thierry Mugler dress.jpg"
+                        alt="Imagen de producto">
+                    <h3 class="card__title">Vestido Thierry Mugler</h3>
+                    <span class="card__code">012677</span>
+                    <p class="card__description">Talle:S <br>
+                        Color:Negro
+                    </p>
+                    <span class="card__price">US$2000</span>
                     <div class="card__actions">
                         <button class="button button--add">Agregar al carrito</button>
                         <span class="card__counter">0</span>
@@ -84,16 +83,37 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card__image" src="./assets/images/products/product04.jpg" alt="Imagen de producto">
-                    <h3 class="card__title">Titulo</h3>
-                    <span class="card__code">025694</span>
-                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                        eveniet omnis asperiores sint temporibus nobis possimus adipisci! Sit molestias sint similique
-                        accusantium vitae praesentium, exercitationem dignissimos nesciunt neque rem odit. Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Dignissimos, cumque cum impedit saepe magni
-                        voluptatibus corrupti maxime maiores beatae officiis fuga quo quasi nobis soluta repellat
-                        architecto exercitationem doloremque fugit.</p>
-                    <span class="card__price">$1000</span>
+                    <img class="card__image" src="./assets/images/products/Alexandre Vauthier coat.jpg"
+                        alt="Imagen de producto">
+                    <h3 class="card__title">Campera Alexandre Vauthier</h3>
+                    <span class="card__code">044888</span>
+                    <p class="card__description">Talle:M
+                        <br>
+                        Color:Negro
+                    </p>
+                    <span class="card__price">US$1000</span>
+                    <div class="card__actions">
+                        <button class="button button--add">Agregar al carrito</button>
+                        <span class="card__counter">0</span>
+                        <button class="button button--remove">Quitar del carrito</button>
+                    </div>
+                </div>
+
+            </article>
+
+            <br>
+
+            <h2 class="h2Prod">Shoes</h2>
+            <article class="gallery">
+                <div class="card">
+                    <img class="card__image" src="./assets/images/products/Rick Owens.jpg" alt="Imagen de producto">
+                    <h3 class="card__title">Sandalias de cuero Rick Owens</h3>
+                    <span class="card__code">033666</span>
+                    <p class="card__description">Talle:36
+                        <br>
+                        Color: Negro
+                    </p>
+                    <span class="card__price">US$800</span>
                     <div class="card__actions">
                         <button class="button button--add">Agregar al carrito</button>
                         <span class="card__counter">0</span>
@@ -101,16 +121,14 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card__image" src="./assets/images/products/product05.jpg" alt="Imagen de producto">
-                    <h3 class="card__title">Titulo</h3>
-                    <span class="card__code">025694</span>
-                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                        eveniet omnis asperiores sint temporibus nobis possimus adipisci! Sit molestias sint similique
-                        accusantium vitae praesentium, exercitationem dignissimos nesciunt neque rem odit. Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Dignissimos, cumque cum impedit saepe magni
-                        voluptatibus corrupti maxime maiores beatae officiis fuga quo quasi nobis soluta repellat
-                        architecto exercitationem doloremque fugit.</p>
-                    <span class="card__price">$1000</span>
+                    <img class="card__image" src="./assets/images/products/Dior shoes.jpg" alt="Imagen de producto">
+                    <h3 class="card__title">Zapatos en punta Dior</h3>
+                    <span class="card__code">025599</span>
+                    <p class="card__description">Talle:38
+                        <br>
+                        Color:Negro
+                    </p>
+                    <span class="card__price">US$1000</span>
                     <div class="card__actions">
                         <button class="button button--add">Agregar al carrito</button>
                         <span class="card__counter">0</span>
@@ -118,16 +136,15 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card__image" src="./assets/images/products/product06.jpg" alt="Imagen de producto">
-                    <h3 class="card__title">Titulo</h3>
-                    <span class="card__code">025694</span>
-                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                        eveniet omnis asperiores sint temporibus nobis possimus adipisci! Sit molestias sint similique
-                        accusantium vitae praesentium, exercitationem dignissimos nesciunt neque rem odit. Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Dignissimos, cumque cum impedit saepe magni
-                        voluptatibus corrupti maxime maiores beatae officiis fuga quo quasi nobis soluta repellat
-                        architecto exercitationem doloremque fugit.</p>
-                    <span class="card__price">$1000</span>
+                    <img class="card__image" src="./assets/images/products/Acne studios shoes.jpg"
+                        alt="Imagen de producto">
+                    <h3 class="card__title">Botas de cuero Acne Studios</h3>
+                    <span class="card__code">022555</span>
+                    <p class="card__description">Talle:39
+                        <br>
+                        Color:Negro
+                    </p>
+                    <span class="card__price">US$1500</span>
                     <div class="card__actions">
                         <button class="button button--add">Agregar al carrito</button>
                         <span class="card__counter">0</span>
@@ -135,28 +152,160 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img class="card__image" src="./assets/images/products/product07.jpg" alt="Imagen de producto">
-                    <h3 class="card__title">Titulo</h3>
-                    <span class="card__code">025694</span>
-                    <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-                        eveniet omnis asperiores sint temporibus nobis possimus adipisci! Sit molestias sint similique
-                        accusantium vitae praesentium, exercitationem dignissimos nesciunt neque rem odit. Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Dignissimos, cumque cum impedit saepe magni
-                        voluptatibus corrupti maxime maiores beatae officiis fuga quo quasi nobis soluta repellat
-                        architecto exercitationem doloremque fugit.</p>
-                    <span class="card__price">$1000</span>
+                    <img class="card__image" src="./assets/images/products/Y2K botas.jpg" alt="Imagen de producto">
+                    <h3 class="card__title">Botas de Cuero Y2K Celine</h3>
+                    <span class="card__code">033666</span>
+                    <p class="card__description">Talle:36
+                        <br>
+                        Color:Negro
+                    </p>
+                    <span class="card__price">US$950</span>
                     <div class="card__actions">
                         <button class="button button--add">Agregar al carrito</button>
                         <span class="card__counter">0</span>
                         <button class="button button--remove">Quitar del carrito</button>
                     </div>
                 </div>
+
+            </article>
+            <br>
+
+            <h2 class="h2Prod">Bottoms</h2>
+            <article class="gallery">
+                <div class="card">
+                    <img class="card__image" src="./assets/images/products/Jean Paul skirt.jpg"
+                        alt="Imagen de producto">
+                    <h3 class="card__title">Pollera tubo Jean Paul Gaultier</h3>
+                    <span class="card__code">011888</span>
+                    <p class="card__description">Talle:XS
+                        <br>
+                        Color: Estampado unico
+                    </p>
+                    <span class="card__price">US$450</span>
+                    <div class="card__actions">
+                        <button class="button button--add">Agregar al carrito</button>
+                        <span class="card__counter">0</span>
+                        <button class="button button--remove">Quitar del carrito</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./assets/images/products/Andrea Bogosian pants.jpg"
+                        alt="Imagen de producto">
+                    <h3 class="card__title">Pantalon de cuero Andrea Bogosian</h3>
+                    <span class="card__code">099111</span>
+                    <p class="card__description">Talle:S
+                        <br>
+                        Color:Negro
+                    </p>
+                    <span class="card__price">US$300</span>
+                    <div class="card__actions">
+                        <button class="button button--add">Agregar al carrito</button>
+                        <span class="card__counter">0</span>
+                        <button class="button button--remove">Quitar del carrito</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./assets/images/products/Comme Des Garçons pollera.jpg"
+                        alt="Imagen de producto">
+                    <h3 class="card__title">Pollera de tul Comme Des Garçons</h3>
+                    <span class="card__code">033777</span>
+                    <p class="card__description">Talle:XS
+                        <br>
+                        Color:Negro
+                    </p>
+                    <span class="card__price">US$500</span>
+                    <div class="card__actions">
+                        <button class="button button--add">Agregar al carrito</button>
+                        <span class="card__counter">0</span>
+                        <button class="button button--remove">Quitar del carrito</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./assets/images/products/bottom.jpg" alt="Imagen de producto">
+                    <h3 class="card__title">Pollera Punk Alexander McQueen</h3>
+                    <span class="card__code">033999</span>
+                    <p class="card__description">Talle:M
+                        <br>
+                        Color:Negro
+                    </p>
+                    <span class="card__price">US$450</span>
+                    <div class="card__actions">
+                        <button class="button button--add">Agregar al carrito</button>
+                        <span class="card__counter">0</span>
+                        <button class="button button--remove">Quitar del carrito</button>
+                    </div>
+                </div>
+
+            </article>
+            <br>
+
+            <h2 class="h2Prod">Accesories</h2>
+            <article class="gallery">
+                <div class="card">
+                    <img class="card__image" src="./assets/images/products/lentes jean Paul.jpg"
+                        alt="Imagen de producto">
+                    <h3 class="card__title">Lentes vintage Jean Paul Gaultier</h3>
+                    <span class="card__code">055222</span>
+                    <p class="card__description">Color:Marron con detalles metalicos color dorado</p>
+                    <span class="card__price">US$1000</span>
+                    <div class="card__actions">
+                        <button class="button button--add">Agregar al carrito</button>
+                        <span class="card__counter">0</span>
+                        <button class="button button--remove">Quitar del carrito</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./assets/images/products/Prada cartera.jpg" alt="Imagen de producto">
+                    <h3 class="card__title">Cartera de cuero Prada</h3>
+                    <span class="card__code">011022</span>
+                    <p class="card__description">Talle:Pequeño
+                        <br>
+                        Color:Negro
+                    </p>
+                    <span class="card__price">US$800</span>
+                    <div class="card__actions">
+                        <button class="button button--add">Agregar al carrito</button>
+                        <span class="card__counter">0</span>
+                        <button class="button button--remove">Quitar del carrito</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./assets/images/products/Chanel gorro.jpg" alt="Imagen de producto">
+                    <h3 class="card__title">Gorro de invierno Chanel</h3>
+                    <span class="card__code">017432</span>
+                    <p class="card__description">Talle:S
+                        <br>
+                        Color:Negro y blanco
+                    </p>
+                    <span class="card__price">US$400</span>
+                    <div class="card__actions">
+                        <button class="button button--add">Agregar al carrito</button>
+                        <span class="card__counter">0</span>
+                        <button class="button button--remove">Quitar del carrito</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="./assets/images/products/Bags.jpg" alt="Imagen de producto">
+                    <h3 class="card__title">Cartera Dsquared2</h3>
+                    <span class="card__code">033888</span>
+                    <p class="card__description">Talle:Mediano
+                        <br>
+                        Color: Rojo con detalles en negro y blanco
+                    </p>
+                    <span class="card__price">US$1300</span>
+                    <div class="card__actions">
+                        <button class="button button--add">Agregar al carrito</button>
+                        <span class="card__counter">0</span>
+                        <button class="button button--remove">Quitar del carrito</button>
+                    </div>
+                </div>
+
             </article>
         </section>
     </main>
 
     <footer>
-        <p class="copyright">&copy;2025 Todos los derechos reservados - MiNombre</p>
+        <p class="copyright">&copy;2025 Todos los derechos reservados - Sofia Pascual</p>
     </footer>
 
     <script type="module" src="./js/main.js"></script>
