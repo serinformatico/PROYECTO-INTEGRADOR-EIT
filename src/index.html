@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda Web - Inicio</title>
+    <title>AF Revestimientos - Inicio</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
     <header>
-        <h1>Tienda Web</h1>
+        <div class="header__brand">
+            <img class="header__logo" src="./assets/images/logo.jpg" alt="Logo de AF Revestimientos">
+            <h1 class="header__title">AF Revestimientos</h1>
+            <img class="header__logo" src="./assets/images/logo.jpg" alt="Logo de AF Revestimientos">
+        </div>
+
         <nav>
             <ul class="navbar">
                 <li><a class="navbar__item navbar__item--active" href="./index.html">Inicio</a></li>
@@ -27,22 +32,41 @@
             <div class="slider">
                 <div class="slider__slides">
                     <div class="slider__slide">
-                        <img src="./assets/images/slider/slide1.jpg" alt="Coche deportivo 1" />
+                        <img src="./assets/images/slider/slider6.png" alt="Coche deportivo 1">
                     </div>
                     <div class="slider__slide">
-                        <img src="./assets/images/slider/slide2.jpg" alt="Coche deportivo 2" />
+                        <img src="./assets/images/slider/images.png" alt="Coche deportivo 2">
                     </div>
                     <div class="slider__slide">
-                        <img src="./assets/images/slider/slide3.jpg" alt="Coche deportivo 3" />
+                        <img src="./assets/images/slider/slider5.png" alt="Coche deportivo 3">
                     </div>
                 </div>
             </div>
         </section>
+        <section class="featured-products">
+            <h2 class="featured-products__title">Productos Destacados</h2>
+            <div class="featured-products__container">
+                <article class="product-card">
+                    <img src="./assets/images/products/product02.jpg" alt="Producto 1" class="product-card__image">
+                    <h3 class="product-card__title">Revestimiento De Pared Interior Wall Panel Eps Beige</h3>
+                </article>
+                <article class="product-card">
+                    <img src="./assets/images/products/product06.jpg" alt="Producto 2" class="product-card__image">
+                    <h3 class="product-card__title">Revestimiento Pared Wall Panel Wpc Madera Gris Oscuro</h3>
+                </article>
+                <article class="product-card">
+                    <img src="./assets/images/products/product08" alt="Producto 3" class="product-card__image">
+                    <h3 class="product-card__title">Panel Varillado Revestimiento De Pared Eps Natural Teka</h3>
+                </article>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p class="copyright">&copy;2025 Todos los derechos reservados - MiNombre</p>
+        <p class="copyright">&copy;2025 Todos los derechos reservados - Alfredo Kunschek</p>
     </footer>
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

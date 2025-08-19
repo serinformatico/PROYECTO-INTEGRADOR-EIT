@@ -5,7 +5,10 @@ nav {
   grid-area: navbar;
 
 
+
   .navbar {
+
+    margin-bottom: 0%;
 
     display: flex;
     justify-content: center;
@@ -13,7 +16,8 @@ nav {
 
     &__item {
       color: var.$color-neutro-900;
-      font-size: var.$font-size-md;
+      font-size: var.$font-size-lg;
+      text-shadow: var.$text-shadow-xl ;
 
       &:hover,
       &--active {

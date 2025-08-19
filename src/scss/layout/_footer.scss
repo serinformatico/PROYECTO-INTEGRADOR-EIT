@@ -3,11 +3,12 @@
 
 footer {
     grid-area: footer;
-
+    background-color: var.$color-success-1200;
     padding: var.$spacing-sm;
+    width: 100%;
 
     .copyright {
-        color: var.$color-neutro-700;
+        color: var.$color-neutro-100;
         font-size: var.$font-size-md;
         font-weight: var.$font-weight-regular;
         text-align: center;

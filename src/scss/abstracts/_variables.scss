@@ -1,24 +1,31 @@
 $color-neutro-100: #f8f9fa;
+$color-neutro-200: #f5f5dc;
 $color-neutro-300: #ced4da;
 $color-neutro-500: #6c757d;
+$color-neutro-600: #666;
 $color-neutro-700: #343a40;
 $color-neutro-900: #212529;
 
 $color-primary-100: #fdf7f3;
 $color-primary-200: #f1e0d3;
-$color-primary-300: #e2c3a8;
+$color-primary-300: #f4e9d8;
 $color-primary-400: #cfa37c;
 $color-primary-500: #b98350;
 $color-primary-600: #9c693f;
 $color-primary-700: #7c5032;
 $color-primary-800: #5c3926;
 $color-primary-900: #3b241a;
+$color-primary-1200: #0d3f49;
+
+
+
 
 $color-success-100: #e6f4ea;
 $color-success-300: #99dba3;
 $color-success-500: #3fb451;
 $color-success-700: #277931;
 $color-success-900: #134119;
+$color-success-1200: #0d3f49;
 
 $color-danger-100: #fbeaea;
 $color-danger-300: #f09898;
@@ -31,6 +38,8 @@ $color-warning-300: #ffdb99;
 $color-warning-500: #ffb93f;
 $color-warning-700: #996e20;
 $color-warning-900: #332409;
+$color-warning-1200: #5b3926;
+
 
 $color-dark-alpha-100: rgba(0, 0, 0, 0.10);
 $color-dark-alpha-300: rgba(0, 0, 0, 0.25);
@@ -46,6 +55,7 @@ $font-size-lg: 1.25rem;
 $font-size-xl: 1.5rem;
 $font-size-xxl: 2rem;
 $font-size-xxxl: 3rem;
+$font-size-xxxxl: 5rem;
 
 $font-weight-light: 300;
 $font-weight-regular: 400;
@@ -83,3 +93,9 @@ $box-shadow-sm: 0.125rem 0.125rem 0.375rem rgba(0, 0, 0, 0.08);
 $box-shadow-md: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.12);
 $box-shadow-lg: 0.375rem 0.375rem 0.75rem rgba(0, 0, 0, 0.16);
 $box-shadow-xl: 0.5rem 0.5rem 1.25rem rgba(0, 0, 0, 0.20);
+
+$font-main: 'Poppins', sans-serif;
+
+$logo-size: 100px;
+
+$background-color: #f8f4ef;

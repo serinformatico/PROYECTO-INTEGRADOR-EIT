@@ -2,6 +2,9 @@
 @use "../abstracts/variables" as var;
 
 .page-contact {
+
+
+
     .content {
         display: flex;
         flex-direction: column;
@@ -13,6 +16,21 @@
             display: flex;
             flex-direction: column;
             gap: var.$spacing-md;
+            width: 100%;
+
+            &__conteiner {
+                background-color: var.$color-primary-200;
+                width: 200%;
+                border: 0.1rem solid var.$color-success-1200;
+                border-radius: 3%;
+                padding: 1rem;
+            }
+
+
+            &__title {
+                text-align: center;
+                color: var.$color-success-1200;
+            }
         }
 
         .contact-data {
@@ -25,15 +43,16 @@
                 flex-direction: column;
                 gap: var.$spacing-sm;
                 padding: var.$spacing-md;
-
-                border: 1px solid var.$color-primary-700;
-                border-radius: 0.25rem;
+                background-color: var.$color-primary-200;
+                border: 0.1rem solid var.$color-success-1200;
+                border-radius: 3%;
+                padding: 1rem;
             }
 
             &__item {
                 font-size: var.$font-size-sm;
                 font-weight: var.$font-weight-bold;
-                color: var.$color-primary-900;
+                color: var.$color-success-1200;
             }
         }
     }

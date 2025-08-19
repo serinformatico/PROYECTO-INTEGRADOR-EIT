@@ -2,7 +2,37 @@
 @use "../abstracts/variables" as var;
 
 header {
-    grid-area: header;
+  grid-area: header;
+  width: 100%;
+}
 
-    padding: var.$spacing-lg;
+.header__brand {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var.$color-success-1200;
+}
+
+.header__logo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+
+  @media (max-width: 600px) {
+    width: 40px;
+  }
+}
+
+.header__title {
+  font-size: 2rem;
+  text-align: center;
+  flex: 1;
+  color: var.$color-success-100;
+  text-shadow: var.$text-shadow-xl ;
+  position: absolute;
+  top: 35px;
+  left: 570px;
 }

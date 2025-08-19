@@ -1,9 +1,19 @@
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/variables" as var;
 
-.title{
+.title {
     padding: var.$spacing-md 0;
-    font-size: var.$font-size-xl;
+    font-size: var.$font-size-xxl;
     font-weight: var.$font-weight-bold;
     color: var.$color-primary-900;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.title1 {
+    text-align: center;
+    text-decoration: underline;
+    margin-left: 600px;
+    font-size: var.$font-size-xxl;
+    font-weight: var.$font-weight-bold;
 }
