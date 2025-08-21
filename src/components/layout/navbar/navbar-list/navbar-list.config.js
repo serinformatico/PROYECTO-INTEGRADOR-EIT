@@ -5,8 +5,18 @@ export const items = [
         label: "Inicio",
     },
     {
-        path: "/other",
+        path: "/about",
         iconName: "Info",
-        label: "Otros",
+        label: "Nosotros",
+    },
+    {
+        path: "/contact",
+        iconName: "Contacts",
+        label: "Contacto",
+    },
+    {
+        path: "/products",
+        iconName: "Inventory",
+        label: "Productos",
     },
 ];

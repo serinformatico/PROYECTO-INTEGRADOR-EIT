@@ -4,7 +4,7 @@ import "./home.scss";
 const Home = () => {
     return (
         <div className="home">
-            <Text variant="h2">Trabajando con Material UI</Text>
+            <Text variant="h2">Inicio</Text>
         </div>
     );
 };
