@@ -1,4 +1,4 @@
-const { useState } = require("react");
+import { useState, useEffect } from "react";
 
 export const useProduct = () => {
     const [ products, setProducts ] = useState([]);
@@ -12,7 +12,7 @@ export const useProduct = () => {
             }
         });
 
-        return maxId++;
+        return maxId + 1;
     };
 
     const get = () => {
@@ -22,6 +22,7 @@ export const useProduct = () => {
         setProducts(collection);
 
         setIsLoading(false);
+        return collection;
     };
 
     const getById = (id) => {
@@ -74,6 +75,10 @@ export const useProduct = () => {
 
         setIsLoading(false);
     };
+
+    useEffect(() => {
+        get();
+    }, []);
 
     return {
         products,

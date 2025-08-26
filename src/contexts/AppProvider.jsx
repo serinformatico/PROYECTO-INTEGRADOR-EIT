@@ -4,12 +4,12 @@ import { useProduct } from "@/hooks/useProduct";
 
 const AppProvider = (props) => {
     const { children } = props;
-    const productContext = useProduct();
+    const productsContext = useProduct();
 
     return (
         <AppContext.Provider
             value={{
-                productContext,
+                productsContext,
             }}>
             {children}
         </AppContext.Provider>
