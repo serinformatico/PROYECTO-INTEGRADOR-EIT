@@ -7,37 +7,39 @@ import "./product-item.scss";
 
 const ProductItem = (props) => {
     const {
+        product,
         isLoading,
-        imagePath,
-        imageAlt,
-        title,
-        description,
         className,
         ...restProps
     } = props;
 
     const classes = `product-item ${className ?? ""}`;
+    const image = import(product.imagePath);
 
     return (
         <MuiCard className={classes} {...restProps}>
             <Skeleton className="product-item__image--skeleton" isLoading={isLoading} variant="rectangular">
                 <CardActionArea>
-                    <img className="product-item__image" src={imagePath} alt={imageAlt}/>
+                    <img className="product-item__image" src={image} alt={product.imageAlt}/>
                 </CardActionArea>
             </Skeleton>
 
             <div className="product-item__content">
                 <Skeleton className="product-item__title--skeleton" isLoading={isLoading}>
-                    <Text className="product-item__title" variant="h3">{title}</Text>
+                    <Text className="product-item__title" variant="h3">{product.title}</Text>
                 </Skeleton>
                 <Skeleton className="product-item__description--skeleton" isLoading={isLoading}>
-                    <Text className="product-item__description" variant="p">{description}</Text>
+                    <Text className="product-item__description" variant="p">{product.description}</Text>
+                </Skeleton>
+                <Skeleton className="product-item__price--skeleton" isLoading={isLoading}>
+                    <Text className="product-item__price" variant="span">Precio: ${product.price}</Text>
                 </Skeleton>
             </div>
 
             <div className="product-item__actions">
                 <Skeleton className="product-item__actions--skeleton" isLoading={isLoading}>
-                    <ButtonPrimary size="sm">Ver más</ButtonPrimary>
+                    <ButtonPrimary size="sm">+</ButtonPrimary>
+                    <ButtonPrimary size="sm">-</ButtonPrimary>
                 </Skeleton>
             </div>
         </MuiCard>
@@ -45,11 +47,15 @@ const ProductItem = (props) => {
 };
 
 ProductItem.propTypes = {
+    product: PropTypes.shape({
+        imagePath: PropTypes.string.isRequired,
+        imageAlt:PropTypes.string.isRequired,
+        title:PropTypes.string.isRequired,
+        description:PropTypes.string.isRequired,
+        price:PropTypes.number.isRequired,
+        stock:PropTypes.number.isRequired,
+    }),
     isLoading: PropTypes.bool.isRequired,
-    imagePath: PropTypes.string.isRequired,
-    imageAlt: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
     className: PropTypes.string,
 };
 
