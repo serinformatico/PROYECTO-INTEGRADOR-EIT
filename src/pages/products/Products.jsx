@@ -3,18 +3,27 @@ import "./products.scss";
 import { useContext } from "react";
 import AppContext from "@/contexts/AppContext";
 import { ButtonPrimary } from "@/components/buttons";
+import ProductGallery from "./product-gallery/ProductGallery";
 
+const product = {
+    id:1,
+    title:"test1",
+    description:"descripcion",
+    price:1500,
+    stock:5,
+    imagePath: "@/assets/images/img01.jpg",
+    imageAlt: "Imagen de producto",
+
+};
 const Products = () => {
     const { productsContext } = useContext(AppContext);
-    const { products, create } = productsContext;
+    const { create } = productsContext;
 
     return (
         <div className="products">
             <Text variant="h2">Productos</Text>
-            <ButtonPrimary onClick={ () => create({ name:"test1", price:1500 }) }>Crear Producto</ButtonPrimary>
-            {products.map((product) => (
-                <p key={product.id}>{product.name}</p>
-            ))}
+            <ButtonPrimary onClick={ () => create(product) }>Crear Producto</ButtonPrimary>
+            <ProductGallery />
         </div>
     );
 };

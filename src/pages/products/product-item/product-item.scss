@@ -41,6 +41,17 @@
         }
     }
 
+    &__price {
+        font-size: var.$font-size-sm;
+        font-weight: var.$font-weight-bold;
+        text-align: right;
+
+        &--skeleton {
+            height: 42px;
+            width: 368px;
+        }
+    }
+
     &__actions {
         display: flex;
         justify-content: center;

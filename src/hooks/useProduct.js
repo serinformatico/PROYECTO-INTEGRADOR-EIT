@@ -76,6 +76,15 @@ export const useProduct = () => {
         setIsLoading(false);
     };
 
+    const hasStock = (id, quantity) =>{
+        setIsLoading(true);
+
+        const product = getById(id);
+
+        setIsLoading(false);
+        return quantity <= product.stock;
+    };
+
     useEffect(() => {
         get();
     }, []);
@@ -88,5 +97,6 @@ export const useProduct = () => {
         create,
         update,
         remove,
+        hasStock,
     };
 };
