@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const useProduct = () => {
     const [ products, setProducts ] = useState([]);
@@ -21,7 +21,7 @@ export const useProduct = () => {
         const collection = JSON.parse(localStorage.getItem("products")) || [];
         setProducts(collection);
 
-        setIsLoading(false);
+        setIsLoading(true);
         return collection;
     };
 

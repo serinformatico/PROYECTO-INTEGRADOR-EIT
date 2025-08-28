@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 const shoppingCart = {
     items: [{
         id,
@@ -8,7 +8,12 @@ const shoppingCart = {
     totalUnits,
     totalAmount,
 };
-
+function addItem(item) {
+    setState((prevProps) => ({
+        ...prevProps,
+        items: [ ...prev.items, item ],
+    }));
+}
 export const useShoppingCart = () => {
     const [ shoppingCart, setShoppingCart ] = useState({});
 

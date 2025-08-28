@@ -14,13 +14,12 @@ const ProductItem = (props) => {
     } = props;
 
     const classes = `product-item ${className ?? ""}`;
-    const image = import(product.imagePath);
 
     return (
         <MuiCard className={classes} {...restProps}>
-            <Skeleton className="product-item__image--skeleton" isLoading={isLoading} variant="rectangular">
+            <Skeleton className="product-item__image--skeleton" isLoading={isLoading}>
                 <CardActionArea>
-                    <img className="product-item__image" src={image} alt={product.imageAlt}/>
+                    <img className="product-item__image" src={`./src/${product.imagePath}`} alt={product.imageAlt}/>
                 </CardActionArea>
             </Skeleton>
 
@@ -32,13 +31,15 @@ const ProductItem = (props) => {
                     <Text className="product-item__description" variant="p">{product.description}</Text>
                 </Skeleton>
                 <Skeleton className="product-item__price--skeleton" isLoading={isLoading}>
-                    <Text className="product-item__price" variant="span">Precio: ${product.price}</Text>
+                    <Text className="product-item__price" variant="span">${product.price.toFixed(2)}</Text>
                 </Skeleton>
             </div>
 
             <div className="product-item__actions">
                 <Skeleton className="product-item__actions--skeleton" isLoading={isLoading}>
                     <ButtonPrimary size="sm">+</ButtonPrimary>
+                </Skeleton>
+                <Skeleton className="product-item__actions--skeleton" isLoading={isLoading}>
                     <ButtonPrimary size="sm">-</ButtonPrimary>
                 </Skeleton>
             </div>
