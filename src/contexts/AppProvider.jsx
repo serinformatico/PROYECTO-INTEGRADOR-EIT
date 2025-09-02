@@ -1,15 +1,19 @@
+import { useProduct } from "@/hooks/useProduct";
+import { useShoppingCart } from "@/hooks/useShoppingCart";
 import PropTypes from "prop-types";
 import AppContext from "./AppContext";
-import { useProduct } from "@/hooks/useProduct";
 
 const AppProvider = (props) => {
     const { children } = props;
+
     const productsContext = useProduct();
+    const shoppingCartContext = useShoppingCart();
 
     return (
         <AppContext.Provider
             value={{
                 productsContext,
+                shoppingCartContext,
             }}>
             {children}
         </AppContext.Provider>
