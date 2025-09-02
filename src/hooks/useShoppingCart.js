@@ -10,8 +10,9 @@ export const useShoppingCart = () => {
     const createShoppingCartSchema = (articles = []) => {
         return {
             articles,
-            totalQuantity: 0,
-            totalAmount: 0,
+            totalQuantity: articles.reduce((acc, item) => acc + item.quantity, 0),
+            totalAmount: articles.reduce((acc, item) => acc + item.amount, 0),
+
         };
     };
 
@@ -21,14 +22,10 @@ export const useShoppingCart = () => {
         }
 
         return {
-            articles: [{
-                id,
-                quantity,
-                price,
-                amount: quantity * price,
-            }],
-            totalQuantity: shoppingCart.articles.reduce((acc, item) => acc + item.quantity, 0),
-            totalAmount: shoppingCart.articles.reduce((acc, item) => acc + item.amount, 0),
+            id,
+            quantity,
+            price,
+            amount: quantity * price,
         };
     };
 
@@ -43,8 +40,8 @@ export const useShoppingCart = () => {
         setShoppingCart(data);
     };
 
-    const addArticle = (idProduct, quantity) => {
-        const product = fetchProductById(idProduct);
+    const addArticle = async (idProduct, quantity) => {
+        const product = await fetchProductById(idProduct);
 
         const articles = shoppingCart.articles;
         const index = articles.findIndex((item) => item.id === product.id);
@@ -52,9 +49,9 @@ export const useShoppingCart = () => {
         if (index >= 0) {
             const article = articles[index];
             quantity = article.quantity + quantity;
-            articles[index] = createArticleSchema(product.id, quantity, product.stock, product.precio);
+            articles[index] = createArticleSchema(product.id, quantity, product.stock, product.price);
         } else {
-            articles.push(createArticleSchema(product.id, quantity, product.stock, product.precio));
+            articles.push(createArticleSchema(product.id, quantity, product.stock, product.price));
         }
 
         const data = createShoppingCartSchema(articles);
@@ -62,8 +59,8 @@ export const useShoppingCart = () => {
         setShoppingCart(data);
     };
 
-    const subtractArticle = (idProduct, quantity) => {
-        const product = fetchProductById(idProduct);
+    const subtractArticle = async (idProduct, quantity) => {
+        const product = await fetchProductById(idProduct);
 
         const articles = shoppingCart.articles;
         const index = articles.findIndex((item) => item.id === product.id);

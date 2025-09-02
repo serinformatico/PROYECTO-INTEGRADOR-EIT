@@ -7,14 +7,14 @@ import InstitutionLogo from "./institution-logo/InstitutionLogo";
 
 const Header = () => {
     const { shoppingCartContext } = useContext(AppContext);
-    const { totalQuantity } = shoppingCartContext;
+    const { shoppingCart } = shoppingCartContext;
 
     return (
         <header className="header">
             <InstitutionLogo className="header_institution"/>
             <IconButtonBadge
                 className="header__shopping-cart"
-                badgeContent={totalQuantity ?? 0}>
+                badgeContent={shoppingCart.totalQuantity ?? 0}>
                 <ShoppingCartIcon/>
             </IconButtonBadge>
 

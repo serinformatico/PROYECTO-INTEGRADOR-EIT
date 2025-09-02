@@ -8,7 +8,7 @@ const IconButtonBadge = (props) => {
 
     return (
         <IconButton className={classes} {...restProps}>
-            <Badge badgeContent={badgeContent} color="secundary">
+            <Badge badgeContent={badgeContent} color="secondary">
                 {children}
             </Badge>
         </IconButton>
