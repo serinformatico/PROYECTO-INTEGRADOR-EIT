@@ -2,6 +2,8 @@ import { ButtonPrimary } from "@/components/buttons";
 import { Skeleton } from "@/components/skeleton";
 import { Text } from "@/components/texts";
 import AppContext from "@/contexts/AppContext";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import { CardActionArea, Card as MuiCard } from "@mui/material";
 import PropTypes from "prop-types";
 import { useContext } from "react";
@@ -50,10 +52,10 @@ const ProductItem = (props) => {
 
             <div className="product-item__actions">
                 <Skeleton className="product-item__actions--skeleton" isLoading={isLoading}>
-                    <ButtonPrimary size="sm" onClick={handleAddArticle}>+</ButtonPrimary>
+                    <ButtonPrimary size="sm" onClick={handleAddArticle}><AddShoppingCartIcon/></ButtonPrimary>
                 </Skeleton>
                 <Skeleton className="product-item__actions--skeleton" isLoading={isLoading}>
-                    <ButtonPrimary size="sm" onClick={handleSubtractArticle}>-</ButtonPrimary>
+                    <ButtonPrimary size="sm" onClick={handleSubtractArticle}><RemoveCircleOutlineIcon/></ButtonPrimary>
                 </Skeleton>
             </div>
         </MuiCard>
