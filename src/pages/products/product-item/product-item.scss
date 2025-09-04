@@ -78,4 +78,16 @@
             line-height: 1.2;
         }
     }
+
+    &__add {
+        svg {
+            font-size: var.$font-size-lg !important;
+        }
+    }
+
+    &__remove {
+        svg {
+            font-size: var.$font-size-lg !important;
+        }
+    }
 }

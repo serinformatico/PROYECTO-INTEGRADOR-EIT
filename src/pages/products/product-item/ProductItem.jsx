@@ -52,10 +52,10 @@ const ProductItem = (props) => {
 
             <div className="product-item__actions">
                 <Skeleton className="product-item__actions--skeleton" isLoading={isLoading}>
-                    <ButtonPrimary size="sm" onClick={handleAddArticle}><AddShoppingCartIcon/></ButtonPrimary>
+                    <ButtonPrimary className="product-item__add" size="sm" onClick={handleAddArticle}><AddShoppingCartIcon/></ButtonPrimary>
                 </Skeleton>
                 <Skeleton className="product-item__actions--skeleton" isLoading={isLoading}>
-                    <ButtonPrimary size="sm" onClick={handleSubtractArticle}><RemoveCircleOutlineIcon/></ButtonPrimary>
+                    <ButtonPrimary className="product-item__remove" size="sm" onClick={handleSubtractArticle}><RemoveCircleOutlineIcon/></ButtonPrimary>
                 </Skeleton>
             </div>
         </MuiCard>
