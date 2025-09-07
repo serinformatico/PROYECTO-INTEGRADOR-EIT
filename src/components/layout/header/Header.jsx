@@ -17,7 +17,6 @@ const Header = () => {
                 badgeContent={shoppingCart.totalQuantity ?? 0}>
                 <ShoppingCartIcon/>
             </IconButtonBadge>
-
         </header>
     );
 };

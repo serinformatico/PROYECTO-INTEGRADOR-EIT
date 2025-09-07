@@ -6,10 +6,10 @@ const AlertSuccess = (props) => {
 
     return (
         <Alert
+            className={className}
             open={open}
             message={message}
             variant="success"
-            className={className}
             {...restProps}/>
     );
 };

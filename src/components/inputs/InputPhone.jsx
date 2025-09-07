@@ -5,9 +5,6 @@ import Input from "./Input";
 
 const InputPhone = (props) => {
     const {
-        id,
-        name,
-        label,
         value,
         onChange,
         onBlur,
@@ -20,11 +17,10 @@ const InputPhone = (props) => {
     return (
         <Input
             type="tel"
-            id={id || name}
-            name={name}
-            label={label}
+            id="phone"
+            name="phone"
+            label="Teléfono"
             value={value}
-            placeholder="Ingresa tu número de teléfono"
             onChange={onChange}
             onBlur={onBlur}
             error={error}
@@ -36,9 +32,6 @@ const InputPhone = (props) => {
 };
 
 InputPhone.propTypes = {
-    id: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
     value: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired,

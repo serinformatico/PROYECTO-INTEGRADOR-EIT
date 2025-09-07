@@ -3,9 +3,6 @@ import Input from "./Input";
 
 const InputAge = (props) => {
     const {
-        id,
-        name,
-        label,
         value,
         onChange,
         onBlur,
@@ -17,11 +14,10 @@ const InputAge = (props) => {
     return (
         <Input
             type="number"
-            id={id || name}
-            name={name}
-            label={label}
+            id="age"
+            name="age"
+            label="Edad"
             value={value}
-            placeholder="Ingresa tu edad"
             min={18}
             max={100}
             step={1}
@@ -34,9 +30,6 @@ const InputAge = (props) => {
 };
 
 InputAge.propTypes = {
-    id: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
     value: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired,

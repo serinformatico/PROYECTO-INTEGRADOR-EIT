@@ -72,7 +72,8 @@ const removeProduct = (id) => {
             reject(new Error("Producto no encontrado."));
         }
 
-        localStorage.setItem(KEY_PRODUCTS, JSON.stringify(products.splice(index, 1)));
+        const updatedProducts = products.filter((item) => item.id !== parseInt(id));
+        localStorage.setItem(KEY_PRODUCTS, JSON.stringify(updatedProducts));
 
         resolve(products[index]);
     });

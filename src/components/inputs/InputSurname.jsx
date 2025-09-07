@@ -3,9 +3,6 @@ import Input from "./Input";
 
 const InputSurname = (props) => {
     const {
-        id,
-        name,
-        label,
         value,
         onChange,
         onBlur,
@@ -18,11 +15,10 @@ const InputSurname = (props) => {
     return (
         <Input
             type="text"
-            id={id || name}
-            name={name}
-            label={label}
+            id="surname"
+            name="surname"
+            label="Apellido"
             value={value}
-            placeholder="Ingresa tu apellido"
             onChange={onChange}
             onBlur={onBlur}
             error={error}
@@ -33,9 +29,6 @@ const InputSurname = (props) => {
 };
 
 InputSurname.propTypes = {
-    id: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
     value: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired,

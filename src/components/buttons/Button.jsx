@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import "./button.scss";
 
-const Button = ({ children, className, size, variant, ...restProps }) => {
+const Button = (props) => {
+    const { children, className, size, variant, ...restProps } = props;
     const classes = `button button--${size} button--${variant} ${className ?? ""}`;
 
     return (

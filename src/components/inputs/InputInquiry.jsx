@@ -3,9 +3,6 @@ import Input from "./Input";
 
 const InputInquiry = (props) => {
     const {
-        id,
-        name,
-        label,
         value,
         rows = 5,
         onChange,
@@ -19,11 +16,10 @@ const InputInquiry = (props) => {
     return (
         <Input
             type="text"
-            id={id || name}
-            name={name}
-            label={label}
+            id="inquiry"
+            name="inquiry"
+            label="Consulta"
             value={value}
-            placeholder="Ingresa tu consulta"
             multiline
             rows={rows}
             onChange={onChange}
@@ -36,9 +32,6 @@ const InputInquiry = (props) => {
 };
 
 InputInquiry.propTypes = {
-    id: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
     value: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
     rows: PropTypes.number,
     onChange: PropTypes.func.isRequired,
