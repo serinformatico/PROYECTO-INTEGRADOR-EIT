@@ -5,11 +5,7 @@ import Input from "./Input";
 
 const InputPhone = (props) => {
     const {
-        value,
-        onChange,
-        onBlur,
-        error,
-        helperText,
+        formik,
         maxLength = 15,
         ...restProps
     } = props;
@@ -20,11 +16,11 @@ const InputPhone = (props) => {
             id="phone"
             name="phone"
             label="Teléfono"
-            value={value}
-            onChange={onChange}
-            onBlur={onBlur}
-            error={error}
-            helperText={helperText}
+            value={formik.values.phone}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.phone && Boolean(formik.errors.phone)}
+            helperText={formik.touched.phone && formik.errors.phone}
             endAdornment={<InputAdornment position="end"><LocalPhoneOutlinedIcon/></InputAdornment>}
             inputProps={{ maxLength }}
             {...restProps}/>
@@ -32,11 +28,13 @@ const InputPhone = (props) => {
 };
 
 InputPhone.propTypes = {
-    value: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
-    onChange: PropTypes.func.isRequired,
-    onBlur: PropTypes.func.isRequired,
-    error: PropTypes.bool,
-    helperText: PropTypes.string,
+    formik: PropTypes.shape({
+        values: PropTypes.shape({ phone: PropTypes.string.isRequired }).isRequired,
+        handleChange: PropTypes.func.isRequired,
+        handleBlur: PropTypes.func.isRequired,
+        touched: PropTypes.shape({ phone: PropTypes.bool }).isRequired,
+        errors: PropTypes.shape({ phone: PropTypes.string }).isRequired,
+    }).isRequired,
     maxLength: PropTypes.number,
 };
 

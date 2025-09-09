@@ -3,11 +3,7 @@ import Input from "./Input";
 
 const InputStock = (props) => {
     const {
-        value,
-        onChange,
-        onBlur,
-        error,
-        helperText,
+        formik,
         min = 0,
         step = 0.10,
         ...restProps
@@ -19,23 +15,25 @@ const InputStock = (props) => {
             id="stock"
             name="stock"
             label="Stock"
-            value={value}
             min={min}
             step={step}
-            onChange={onChange}
-            onBlur={onBlur}
-            error={error}
-            helperText={helperText}
+            value={formik.values.stock}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.stock && Boolean(formik.errors.stock)}
+            helperText={formik.touched.stock && formik.errors.stock}
             {...restProps}/>
     );
 };
 
 InputStock.propTypes = {
-    value: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
-    onChange: PropTypes.func.isRequired,
-    onBlur: PropTypes.func.isRequired,
-    error: PropTypes.bool,
-    helperText: PropTypes.string,
+    formik: PropTypes.shape({
+        values: PropTypes.shape({ stock: PropTypes.number.isRequired }).isRequired,
+        handleChange: PropTypes.func.isRequired,
+        handleBlur: PropTypes.func.isRequired,
+        touched: PropTypes.shape({ stock: PropTypes.bool }).isRequired,
+        errors: PropTypes.shape({ stock: PropTypes.string }).isRequired,
+    }).isRequired,
     min: PropTypes.number,
     step: PropTypes.number,
 };

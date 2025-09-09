@@ -3,11 +3,7 @@ import Input from "./Input";
 
 const InputSurname = (props) => {
     const {
-        value,
-        onChange,
-        onBlur,
-        error,
-        helperText,
+        formik,
         maxLength = 30,
         ...restProps
     } = props;
@@ -18,22 +14,24 @@ const InputSurname = (props) => {
             id="surname"
             name="surname"
             label="Apellido"
-            value={value}
-            onChange={onChange}
-            onBlur={onBlur}
-            error={error}
-            helperText={helperText}
+            value={formik.values.surname}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.surname && Boolean(formik.errors.surname)}
+            helperText={formik.touched.surname && formik.errors.surname}
             inputProps={{ maxLength }}
             {...restProps}/>
     );
 };
 
 InputSurname.propTypes = {
-    value: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
-    onChange: PropTypes.func.isRequired,
-    onBlur: PropTypes.func.isRequired,
-    error: PropTypes.bool,
-    helperText: PropTypes.string,
+    formik: PropTypes.shape({
+        values: PropTypes.shape({ surname: PropTypes.string.isRequired }).isRequired,
+        handleChange: PropTypes.func.isRequired,
+        handleBlur: PropTypes.func.isRequired,
+        touched: PropTypes.shape({ surname: PropTypes.bool }).isRequired,
+        errors: PropTypes.shape({ surname: PropTypes.string }).isRequired,
+    }).isRequired,
     maxLength: PropTypes.number,
 };
 
