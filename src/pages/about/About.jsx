@@ -1,8 +1,8 @@
 import { Text } from "@/components/texts";
 import "./about.scss";
-import Vision from "./vision/Vision";
 import Mission from "./mission/Mission";
 import Values from "./values/Values";
+import Vision from "./vision/Vision";
 
 const About = () => {
     return (

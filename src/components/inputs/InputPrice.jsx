@@ -31,7 +31,9 @@ const InputPrice = (props) => {
 
 InputPrice.propTypes = {
     formik: PropTypes.shape({
-        values: PropTypes.shape({ price: PropTypes.string.isRequired }).isRequired,
+        values: PropTypes.shape({
+            price: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]).isRequired,
+        }).isRequired,
         handleChange: PropTypes.func.isRequired,
         handleBlur: PropTypes.func.isRequired,
         touched: PropTypes.shape({ price: PropTypes.bool }).isRequired,

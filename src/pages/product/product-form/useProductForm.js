@@ -17,8 +17,6 @@ const useProductForm = (idProduct) => {
         validateOnChange: true,
         validateOnBlur: true,
         onSubmit: (values) => {
-            console.log("values", values, idProduct);
-
             idProduct ? updateProduct(idProduct, values) : createProduct(values);
             setIsSubmitted(true);
             fetchProducts();

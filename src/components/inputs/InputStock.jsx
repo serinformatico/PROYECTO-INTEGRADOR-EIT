@@ -28,7 +28,9 @@ const InputStock = (props) => {
 
 InputStock.propTypes = {
     formik: PropTypes.shape({
-        values: PropTypes.shape({ stock: PropTypes.number.isRequired }).isRequired,
+        values: PropTypes.shape({
+            stock: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]).isRequired,
+        }).isRequired,
         handleChange: PropTypes.func.isRequired,
         handleBlur: PropTypes.func.isRequired,
         touched: PropTypes.shape({ stock: PropTypes.bool }).isRequired,
