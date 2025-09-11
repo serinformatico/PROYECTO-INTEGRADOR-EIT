@@ -68,7 +68,7 @@ export const useShoppingCart = () => {
         if (index >= 0) {
             const article = articles[index];
             quantity = article.quantity - quantity;
-            articles[index] = createArticleSchema(product.id, quantity, product.stock, product.precio);
+            articles[index] = createArticleSchema(product.id, quantity, product.stock, product.price);
 
             if (quantity <= 0) {
                 articles.splice(index, 1);
