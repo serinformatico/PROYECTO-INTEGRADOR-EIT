@@ -1,8 +1,8 @@
 import { Text } from "@/components/texts";
-import "./shopping-cart.scss";
+import AppContext from "@/contexts/AppContext";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import { useContext } from "react";
-import AppContext from "@/contexts/AppContext";
+import "./shopping-cart.scss";
 
 const ShoppingCart = () => {
     const { shoppingCartContext } = useContext(AppContext);
@@ -24,7 +24,7 @@ const ShoppingCart = () => {
                 <TableBody>
                     {shoppingCart.articles?.map((article)=>(
                         <TableRow key={article.id} className="table__body">
-                            <TableCell align="left">{article.title}</TableCell>
+                            <TableCell align="left">{article.name}</TableCell>
                             <TableCell align="right">{article.quantity}</TableCell>
                             <TableCell align="right">${article.price?.toFixed(2)}</TableCell>
                             <TableCell align="right">${article.amount?.toFixed(2)}</TableCell>
