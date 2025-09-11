@@ -1,4 +1,4 @@
-import * as iconsSvg from "@/assets/svg";
+import * as iconsSvg from "@/svg"; // Updated import path
 import { Tooltip } from "@mui/material";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";

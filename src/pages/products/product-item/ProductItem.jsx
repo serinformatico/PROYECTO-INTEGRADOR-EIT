@@ -59,7 +59,7 @@ const ProductItem = (props) => {
                 <CardActionArea>
                     <img
                         className="product-item__image"
-                        src={`/src/assets/images/products/${product.thumbnail}`}
+                        src={`/images/products/${product.thumbnail}`}
                         alt="Imagen del producto"
                         onClick={handleEditProduct}/>
                 </CardActionArea>
