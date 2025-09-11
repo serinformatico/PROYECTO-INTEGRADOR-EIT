@@ -1,4 +1,3 @@
-import logo from "@/assets/images/logo.png";
 import { Text } from "@/components/texts";
 import PropTypes from "prop-types";
 import "./institution-logo.scss";
@@ -9,7 +8,7 @@ const InstitutionLogo = (props) => {
 
     return (
         <div className={classes} {...restProps}>
-            <img className="institution-logo__logo" src={logo} alt="Logo de la institución"/>
+            <img className="institution-logo__logo" src={"/src/assets/images/logo.png"} alt="Logo de la institución"/>
             <Text className="institution-logo__title" variant="h1">Mi App</Text>
         </div>
     );

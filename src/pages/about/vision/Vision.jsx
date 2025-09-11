@@ -1,4 +1,3 @@
-import vision from "@/assets/images/about/vision.png";
 import { Text } from "@/components/texts";
 import AppContext from "@/contexts/AppContext";
 import { useContext } from "react";
@@ -12,7 +11,7 @@ const Vision = () => {
         <section className="vision">
             <Text className="vision__title" variant="h3">Visión</Text>
             <div>
-                <img className="vision__image" src={vision} alt="Imagen de la visión de la empresa"/>
+                <img className="vision__image" src={"/src/assets/images/about/vision.png"} alt="Imagen de la visión de la empresa"/>
                 <Text className="vision__description" variant="p">{institution.about.vision}</Text>
             </div>
         </section>
