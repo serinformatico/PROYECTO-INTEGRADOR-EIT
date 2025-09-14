@@ -1,10 +1,13 @@
-import { Text } from "@/components/texts";
+
+import { HighlightedParagraph } from "@/components/highlighted-paragraph";
+import { FeaturedProductsGallery } from "@/components/featured-products";
 import "./home.scss";
 
 const Home = () => {
     return (
         <div className="home">
-            <Text variant="h2">Inicio</Text>
+            <HighlightedParagraph />
+            <FeaturedProductsGallery />
         </div>
     );
 };

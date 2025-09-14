@@ -8,7 +8,7 @@ import { validationSchema } from "./product-form.validation-schema.js";
 const useProductForm = (idProduct) => {
     const [ isSubmitted, setIsSubmitted ] = useState(false);
     const { productsContext } = useContext(AppContext);
-    const { updateProduct, createProduct, fetchProducts, fetchProductById } = productsContext;
+    const { updateProduct, createProduct, fetchProducts, fetchProductById, removeProduct } = productsContext;
     const navigate = useNavigate();
 
     const formik = useFormik({
@@ -42,6 +42,14 @@ const useProductForm = (idProduct) => {
         navigate("/products");
     };
 
+    const handleRemove = async () => {
+        if (idProduct) {
+            await removeProduct(idProduct);
+            fetchProducts();
+            navigate("/products");
+        }
+    };
+
     const loadProduct = async (idProduct) => {
         const product = await fetchProductById(idProduct);
         formik.setValues(product);
@@ -59,6 +67,7 @@ const useProductForm = (idProduct) => {
         isSubmitted,
         close,
         cancel,
+        handleRemove,
     };
 
 };

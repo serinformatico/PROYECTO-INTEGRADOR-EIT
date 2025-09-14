@@ -1,0 +1,58 @@
+@use "@/scss/variables" as var;
+
+.featured-products-gallery {
+    width: 100%;
+    margin: var.$spacing-xl 0;
+
+    &__title {
+        text-align: center;
+        color: var.$color-primary-800;
+        font-weight: var.$font-weight-bold;
+        margin-bottom: var.$spacing-xl;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: var.$spacing-sm;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, var.$color-primary-500, var.$color-primary-600);
+            border-radius: 2px;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var.$spacing-lg;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: var.$spacing-md;
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: var.$spacing-md;
+        }
+    }
+
+    &__empty {
+        text-align: center;
+        padding: var.$spacing-xl;
+        background-color: var.$color-neutro-200;
+        border-radius: 12px;
+        border: 1px solid var.$color-primary-200;
+    }
+
+    &__empty-text {
+        color: var.$color-neutro-600;
+        font-size: var.$font-size-md;
+        margin: 0;
+    }
+}

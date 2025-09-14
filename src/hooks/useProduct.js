@@ -3,6 +3,8 @@ import productsApi from "../api/products.api.js";
 
 export const useProduct = () => {
     const [ products, setProducts ] = useState([]);
+    const [ filteredProducts, setFilteredProducts ] = useState([]);
+    const [ searchTerm, setSearchTerm ] = useState("");
     const [ isLoading, setIsLoading ] = useState(false);
     const [ error, setError ] = useState(null);
 
@@ -13,8 +15,10 @@ export const useProduct = () => {
         try {
             const data = await productsApi.fetchProducts();
             setProducts(data);
+            setFilteredProducts(data);
         } catch (error) {
             setProducts([]);
+            setFilteredProducts([]);
             setError(error.message || "Error al cargar productos.");
         }
 
@@ -94,12 +98,38 @@ export const useProduct = () => {
         return result;
     };
 
+    const searchProducts = (term) => {
+        setSearchTerm(term);
+
+        if (!term.trim()) {
+            setFilteredProducts(products);
+            return;
+        }
+
+        const filtered = products.filter((product) =>
+            product.name.toLowerCase().includes(term.toLowerCase()),
+        );
+
+        setFilteredProducts(filtered);
+    };
+
+    const clearSearch = () => {
+        setSearchTerm("");
+        setFilteredProducts(products);
+    };
+
     useEffect(() => {
         fetchProducts();
     }, []);
 
+    useEffect(() => {
+        setFilteredProducts(products);
+    }, [products]);
+
     return {
         products,
+        filteredProducts,
+        searchTerm,
         isLoading,
         error,
         fetchProducts,
@@ -108,5 +138,7 @@ export const useProduct = () => {
         updateProduct,
         removeProduct,
         checkProductStock,
+        searchProducts,
+        clearSearch,
     };
 };

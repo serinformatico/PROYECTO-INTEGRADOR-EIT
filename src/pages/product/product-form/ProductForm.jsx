@@ -9,7 +9,7 @@ const ProductForm = (props) => {
     const { idProduct, className, ...restProps } = props;
     const classes = `product-form ${className ?? ""}`;
 
-    const { formik, isSubmitted, isSubmitDisabled, cancel, close } = useProductForm(idProduct);
+    const { formik, isSubmitted, isSubmitDisabled, cancel, close, handleRemove } = useProductForm(idProduct);
 
     return (
         <form className={classes} onSubmit={formik.handleSubmit} {...restProps}>
@@ -27,6 +27,9 @@ const ProductForm = (props) => {
             <div className="product-form__actions">
                 <ButtonPrimary type="submit" disabled={isSubmitDisabled()}>Aceptar</ButtonPrimary>
                 <ButtonDanger type="button" onClick={() => cancel()}>Cancelar</ButtonDanger>
+                {idProduct && (
+                    <ButtonDanger type="button" onClick={handleRemove}>Eliminar</ButtonDanger>
+                )}
             </div>
 
             <div className="product-form__alert">

@@ -9,11 +9,20 @@ const Values = () => {
 
     return (
         <section className="values">
-            <Text className="values__title" variant="h3">Valores</Text>
-            <div>
-                <img className="values__image" src={"/images/about/values.png"} alt="Imagen de los valores de la empresa"/>
-                <Text className="values__description" variant="p">{institution.about.values}</Text>
+            <div className="values__content">
+                <Text className="values__title" variant="h3">
+          Valores
+                </Text>
+
+                <Text className="values__description" variant="p">
+                    {institution.about.values}
+                </Text>
             </div>
+
+            <img
+                className="values__image"
+                src="/images/about/values.png"
+                alt="Imagen de los valores de la institución"/>
         </section>
     );
 };

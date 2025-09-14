@@ -6,17 +6,25 @@ import "./product-gallery.scss";
 
 const ProductGallery = () => {
     const { productsContext } = useContext(AppContext);
-    const { products, isLoading } = productsContext;
+    const { filteredProducts, isLoading, searchTerm } = productsContext;
 
     return (
         <div className="product-gallery">
             <ProductNewItem/>
-            {products.map((product) => (
-                <ProductItem
-                    key={product.id}
-                    product={product}
-                    isLoading={isLoading}/>
-            ))}
+            {filteredProducts.length > 0 ? (
+                filteredProducts.map((product) => (
+                    <ProductItem
+                        key={product.id}
+                        product={product}
+                        isLoading={isLoading}/>
+                ))
+            ) : (
+                searchTerm && (
+                    <div className="product-gallery__no-results">
+                        <p>{`No se encontraron resultados para "${searchTerm}"`}</p>
+                    </div>
+                )
+            )}
         </div>
     );
 };

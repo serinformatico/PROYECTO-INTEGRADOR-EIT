@@ -21,4 +21,17 @@
     @media (max-width: 576px) {
         grid-template-columns: 1fr;
     }
+
+    &__no-results {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: var.$spacing-xl;
+        font-size: 1.1rem;
+        border-radius: 8px;
+       
+
+        p {
+            margin: 0;
+        }
+    }
 }

@@ -1,0 +1,143 @@
+@use "@/scss/variables" as var;
+
+.featured-product-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 2px solid var.$color-primary-200;
+    box-shadow: 0 4px 12px var.$color-dark-alpha-100;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 32px var.$color-neutro-100;
+        border-color: var.$color-primary-400;
+    }
+
+    &__badge {
+        position: absolute;
+        top: var.$spacing-sm;
+        right: var.$spacing-sm;
+        background: linear-gradient(135deg, var.$color-primary-500, var.$color-primary-600);
+        padding: var.$spacing-xs var.$spacing-sm;
+        border-radius: 20px;
+        z-index: 2;
+        box-shadow: 0 2px 8px var.$color-neutro-100;
+    }
+
+    &__badge-text {
+        color: var.$color-neutro-100;
+        font-size: var.$font-size-xs;
+        font-weight: var.$font-weight-bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    &__image {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16/9;
+        transition: transform 0.3s ease;
+
+        &--skeleton {
+            height: auto;
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 0 !important;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var.$spacing-sm;
+        padding: var.$spacing-lg;
+        background: linear-gradient(135deg, var.$color-neutro-100 0%, var.$color-primary-100 100%);
+        min-height: 140px;
+    }
+
+    &__name {
+        font-size: var.$font-size-lg;
+        font-weight: var.$font-weight-bold;
+        color: var.$color-primary-800;
+        margin: 0;
+        line-height: var.$line-height-sm;
+
+        &--skeleton {
+            height: 28px;
+            width: 80%;
+        }
+    }
+
+    &__description {
+        font-size: var.$font-size-sm;
+        font-weight: var.$font-weight-regular;
+        color: var.$color-neutro-700;
+        text-align: left;
+        margin: 0;
+        line-height: var.$line-height-md;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        text-overflow: ellipsis;
+        overflow: hidden;
+
+        &--skeleton {
+            height: 40px;
+            width: 100%;
+        }
+    }
+
+    &__price {
+        font-size: var.$font-size-xl;
+        font-weight: var.$font-weight-bold;
+        color: var.$color-success-500;
+        align-self: flex-end;
+        margin: 0;
+        margin-top: auto;
+
+        &--skeleton {
+            height: 24px;
+            width: 80px;
+            align-self: flex-end;
+        }
+    }
+
+    // Animación de entrada
+    animation: slideInUp 0.6s ease-out;
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    // Responsive
+    @media (max-width: 768px) {
+        &__content {
+            padding: var.$spacing-md;
+            min-height: 120px;
+        }
+
+        &__name {
+            font-size: var.$font-size-md;
+        }
+
+        &__description {
+            font-size: var.$font-size-xs;
+        }
+
+        &__price {
+            font-size: var.$font-size-lg;
+        }
+    }
+}

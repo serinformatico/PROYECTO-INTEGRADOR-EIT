@@ -2,17 +2,41 @@
 
 .navbar {
     grid-area: navbar;
+    padding: var.$spacing-md !important;
+    background-color: var.$color-neutro-100;
+    border-bottom: 1px solid var.$color-neutro-300;
 
-    padding: var.$spacing-sm !important;
-    background-color: var.$color-primary-300;
-
-    &__menu-icon,
-    &__menu-drawer {
-        color: var.$color-primary-700;
+    &__menu-icon {
+        color: var.$color-neutro-700;
         display: none !important;
+        font-size: var.$font-size-lg;
+        padding: var.$spacing-sm;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var.$color-neutro-200;
+        }
+    }
+
+    &__menu-drawer {
+        color: var.$color-neutro-700;
+        display: none !important;
+
+        .MuiDrawer-paper {
+            background-color: var.$color-neutro-100;
+            border-right: 1px solid var.$color-neutro-300;
+        }
+    }
+
+    &__menu-list {
+        justify-content: center;
+        align-items: center;
     }
 
     @media (max-width: 768px) {
+        padding: var.$spacing-sm !important;
 
         &__menu-icon,
         &__menu-drawer {

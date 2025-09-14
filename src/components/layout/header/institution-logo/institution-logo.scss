@@ -2,18 +2,36 @@
 
 .institution-logo {
     display: flex;
+    gap: var.$spacing-md;
     align-items: center;
-    gap: var.$spacing-sm;
+    padding: var.$spacing-sm var.$spacing-md;
 
     &__logo {
-        height: fit-content;
-        width: var.$font-size-xxl;
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+        border-radius: 8px;
     }
 
     &__title {
-        font-size: var.$font-size-xxl;
+        font-size: var.$font-size-xl;
         font-weight: var.$font-weight-bold;
-        text-transform: uppercase;
+        color: var.$color-neutro-100;
+        margin: 0;
+        letter-spacing: -0.5px;
     }
 
+    @media (max-width: 768px) {
+        gap: var.$spacing-sm;
+        padding: var.$spacing-xs var.$spacing-sm;
+
+        &__logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        &__title {
+            font-size: var.$font-size-lg;
+        }
+    }
 }

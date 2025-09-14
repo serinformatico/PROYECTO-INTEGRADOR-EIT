@@ -1,0 +1,131 @@
+@use "@/scss/variables" as var;
+
+.highlighted-paragraph {
+    width: 100%;
+    padding: var.$spacing-xl;
+    margin-bottom: var.$spacing-xl;
+    text-align: center;
+
+    &__content {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: var.$spacing-lg;
+    }
+
+    &__title {
+        color: var.$color-primary-800;
+        font-weight: var.$font-weight-bold;
+        line-height: var.$line-height-sm;
+        margin: 0;
+
+        @media (max-width: 768px) {
+            font-size: var.$font-size-xl;
+        }
+    }
+
+    &__subtitle {
+        color: var.$color-primary-700;
+        font-weight: var.$font-weight-regular;
+        line-height: var.$line-height-md;
+        margin: 0;
+
+        @media (max-width: 768px) {
+            font-size: var.$font-size-lg;
+        }
+    }
+
+    &__description {
+        color: var.$color-neutro-700;
+        font-size: var.$font-size-md;
+        line-height: var.$line-height-lg;
+        margin: 0;
+        max-width: 600px;
+        margin: 0 auto;
+
+        @media (max-width: 768px) {
+            font-size: var.$font-size-sm;
+            max-width: 100%;
+        }
+    }
+
+    &__features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var.$spacing-lg;
+        margin-top: var.$spacing-lg;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: var.$spacing-md;
+        }
+    }
+
+    &__feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var.$spacing-lg;
+        padding: var.$spacing-lg;
+        background-color: var.$color-neutro-100;
+        border-radius: 16px;
+        border: 2px solid var.$color-primary-200;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px var.$color-dark-alpha-100;
+
+        &:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px var.$color-neutro-100;
+            background-color: var.$color-primary-100;
+            border-color: var.$color-primary-400;
+
+            .highlighted-paragraph__feature-image {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__feature-image {
+        width: 160px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px var.$color-dark-alpha-100;
+
+        @media (max-width: 768px) {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    &__feature-text {
+        color: var.$color-neutro-700;
+        font-size: var.$font-size-sm;
+        font-weight: var.$font-weight-regular;
+        text-align: center;
+        line-height: var.$line-height-sm;
+
+        @media (max-width: 768px) {
+            font-size: var.$font-size-xs;
+        }
+    }
+
+    // Animación de entrada
+    animation: fadeInUp 0.6s ease-out;
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    // Efecto hover para toda la tarjeta
+  
+}

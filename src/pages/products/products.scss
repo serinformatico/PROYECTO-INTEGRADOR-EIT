@@ -6,4 +6,9 @@
     align-items: center;
     gap: var.$spacing-lg;
     padding: var.$spacing-lg;
+
+    &__search {
+        width: 100%;
+        max-width: 600px;
+    }
 }
