@@ -6,6 +6,4 @@
 **/.env.example
 **/.vscode
 **/.eslint.config.js
-**/.LICENSE
-**/.README.md
-**/.postman_collection.json
+**/setup

@@ -2,6 +2,7 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
+  "description": "Proyecto Integrador EIT Fase 2 - Frontend",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +10,9 @@
     "lint": "eslint ./src --fix",
     "preview": "vite preview"
   },
+  "keywords": [],
+  "author": "Sergio Regalado Alessi",
+  "license": "MIT",
   "dependencies": {
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^7.3.1",

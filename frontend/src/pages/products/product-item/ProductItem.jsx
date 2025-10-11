@@ -1,6 +1,7 @@
 import { ButtonPrimary } from "@/components/buttons";
 import { Skeleton } from "@/components/skeleton";
 import { Text } from "@/components/texts";
+import { API_URL_IMAGES } from "@/constants/api.constant.js";
 import AppContext from "@/contexts/AppContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
@@ -53,13 +54,21 @@ const ProductItem = (props) => {
         );
     };
 
+    const getImageUrl = () => {
+        if (product.thumbnail === "default.jpg") {
+            return `${API_URL_IMAGES}/default.jpg`;
+        }
+
+        return `${API_URL_IMAGES}/products/${product.thumbnail}`;
+    };
+
     return (
         <MuiCard className={classes} {...restProps}>
             <Skeleton className="product-item__image--skeleton" isLoading={isLoading}>
                 <CardActionArea>
                     <img
                         className="product-item__image"
-                        src={`/images/products/${product.thumbnail}`}
+                        src={getImageUrl()}
                         alt="Imagen del producto"
                         onClick={handleEditProduct}/>
                 </CardActionArea>
@@ -86,7 +95,7 @@ const ProductItem = (props) => {
 
 ProductItem.propTypes = {
     product: PropTypes.shape({
-        id: PropTypes.number.isRequired,
+        id: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
         price: PropTypes.number.isRequired,

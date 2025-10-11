@@ -202,7 +202,7 @@ Scripts del monorepo:
 
 ### 3. `.vercelignore`
 
-Excluye archivos innecesarios del deployment.
+Excluye archivos innecesarios del deployment:
 
 ---
 
@@ -265,9 +265,11 @@ Configure en Vercel (Dashboard → Project Settings → Environment Variables):
 | `MONGODB_URI`    | String | String de conexión a MongoDB Atlas              | `mongodb+srv://user:pass@cluster.mongodb.net/eit-f3-project` | All       |
 | `SMTP_HOST`      | String | Host del servidor SMTP                          | `smtp-relay.brevo.com`                                       | All       |
 | `SMTP_PORT`      | Number | Puerto del servidor SMTP (587 TLS o 465 SSL)    | `587`                                                        | All       |
-| `SMTP_USER`      | Email  | Email completo de la cuenta SMTP                | `<user>@smtp-brevo.com`                                      | All       |
-| `SMTP_PASS`      | String | Contraseña de aplicación (no la personal)       | `<password>`                                                 | All       |
+| `SMTP_USER`      | Email  | Email completo de la cuenta SMTP                | `user@smtp-brevo.com`                                        | All       |
+| `SMTP_PASS`      | String | Contraseña de aplicación (no la personal)       | `password`                                                   | All       |
 | `SMTP_RECIPIENT` | Email  | Email destino para recibir mensajes de contacto | `info@example.com`                                           | All       |
+
+**Nota**: No configurar `NODE_ENV`, `PORT` ni `HOST` en Vercel. Estas variables son manejadas automáticamente por la plataforma.
 
 ---
 
@@ -293,11 +295,33 @@ El deployment en Vercel es automático e integrado con GitHub. Cada commit desen
 ### Verificación Post-Deployment
 
 Probar las siguientes URLs:
+
+**Frontend (SPA):**
 ```
 https://proyecto.vercel.app/
-https://proyecto.vercel.app/api/products
 https://proyecto.vercel.app/products
+https://proyecto.vercel.app/about
+https://proyecto.vercel.app/contact
 ```
+
+**Backend (API):**
+```
+https://proyecto.vercel.app/api/products
+https://proyecto.vercel.app/api/institutions/first
+https://proyecto.vercel.app/api/inquiry/send-mail
+```
+
+**Archivos Estáticos (Imágenes):**
+```
+https://proyecto.vercel.app/api/public/images/institutions/logo.png
+https://proyecto.vercel.app/api/public/images/products/default.jpg
+```
+
+**⚠️ Verificaciones Críticas:**
+- ✅ Las rutas del frontend (SPA) no devuelven 404
+- ✅ Las imágenes cargan desde `/api/public/images/`
+- ✅ El favicon se muestra correctamente
+- ✅ La API responde correctamente en `/api/*`
 
 ---
 

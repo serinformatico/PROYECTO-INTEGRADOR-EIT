@@ -1,9 +1,13 @@
+import AppContext from "@/contexts/AppContext";
 import { useFormik } from "formik";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { initialValues } from "./contact-form.initial-value.js";
 import { validationSchema } from "./contact-form.validation-schema.js";
 
 const useContactForm = () => {
+    const { inquiryContext } = useContext(AppContext);
+    const { sendInquiry } = inquiryContext;
+
     const [ isSubmitted, setIsSubmitted ] = useState(false);
 
     const formik = useFormik({
@@ -11,10 +15,13 @@ const useContactForm = () => {
         validationSchema,
         validateOnChange: true,
         validateOnBlur: true,
-        onSubmit: (values) => {
-            console.log("values", values);
-            formik.resetForm();
-            setIsSubmitted(true);
+        onSubmit: async (values) => {
+            const success = await sendInquiry(values);
+
+            if (success) {
+                formik.resetForm();
+                setIsSubmitted(true);
+            }
         },
     });
 
@@ -26,13 +33,23 @@ const useContactForm = () => {
             || formik.values.phone?.length < 8
             || formik.values.phone?.length > 15
             || !formik.values.inquiry
-            || !formik.isValid;
+            || formik.values.inquiry?.length < 10
+            || !formik.isValid
+            || inquiryContext.isLoading;
+    };
+
+    const close = () => {
+        setIsSubmitted(false);
+        inquiryContext.resetState();
     };
 
     return {
         formik,
         isSubmitDisabled,
         isSubmitted,
+        isLoading: inquiryContext.isLoading,
+        error: inquiryContext.error,
+        close,
     };
 
 };
